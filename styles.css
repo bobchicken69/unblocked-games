@@ -1,0 +1,124 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #f0f0f0;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  /* Main styles */
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .games-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .game-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .game-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .game-card:hover::before {
+    opacity: 1;
+  }
+  
+  .game-card p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  #game-embed-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+  }
+  
+  #game-embed {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Rest of the styles... */
+  
+  #fullscreen-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 145px; /* Adjust this value to create the desired gap */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #fullscreen-button:hover,
+  #back-button:hover {
+    background-color: #555;
+  }
+  
